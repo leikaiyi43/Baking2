@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemperatureViewController">
+            <connections>
+                <outlet property="confirmBtn" destination="W8C-iq-gRW" id="RE4-8I-j4I"/>
+                <outlet property="foodNameLabel" destination="oi4-kX-fhO" id="4pS-DG-cTJ"/>
+                <outlet property="phoneticSelector01" destination="6SJ-6j-HdZ" id="9WR-GD-3cH"/>
+                <outlet property="tableView" destination="cOs-Ej-OaV" id="uDM-xu-qEd"/>
+                <outlet property="titleSegment" destination="Siz-tK-Zpn" id="uRl-JU-dQs"/>
+                <outlet property="view" destination="iN0-l3-epB" id="e2Z-HB-AuG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SJ-6j-HdZ" customClass="SSRollingButtonScrollView">
+                    <rect key="frame" x="0.0" y="65" width="600" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="gVB-2h-zt5"/>
+                    </constraints>
+                </scrollView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="zs5-yy-jDC">
+                    <rect key="frame" x="0.0" y="140" width="600" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fih-g0-dwX"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="ncU-Kz-znE">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="odJ-FX-hPs"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="cOs-Ej-OaV">
+                    <rect key="frame" x="0.0" y="240" width="600" height="245"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Siz-tK-Zpn">
+                    <rect key="frame" x="176" y="200" width="250" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="lQN-Y2-whh"/>
+                        <constraint firstAttribute="width" constant="250" id="qNe-Av-yld"/>
+                    </constraints>
+                    <segments>
+                        <segment title="美食"/>
+                        <segment title="美国农业部"/>
+                    </segments>
+                    <connections>
+                        <action selector="onSegmentChanged:" destination="-1" eventType="valueChanged" id="FBb-J3-F6r"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oi4-kX-fhO">
+                    <rect key="frame" x="200" y="150" width="200" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Lh5-Af-5a4"/>
+                        <constraint firstAttribute="height" constant="40" id="j7y-nw-PH7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8C-iq-gRW">
+                    <rect key="frame" x="275" y="500" width="50" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Tu4-v1-jkr"/>
+                        <constraint firstAttribute="width" constant="50" id="zdR-Am-tmF"/>
+                    </constraints>
+                    <state key="normal" title="确定">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onConfirmed:" destination="-1" eventType="touchUpInside" id="SGX-rr-eO2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cOs-Ej-OaV" firstAttribute="top" secondItem="Siz-tK-Zpn" secondAttribute="bottom" id="1w4-p2-ON2"/>
+                <constraint firstItem="zs5-yy-jDC" firstAttribute="top" secondItem="oi4-kX-fhO" secondAttribute="top" constant="-10" id="2gV-IO-2Sx"/>
+                <constraint firstItem="ncU-Kz-znE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4Ez-A9-fHc"/>
+                <constraint firstItem="ncU-Kz-znE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8b7-I4-o4O"/>
+                <constraint firstAttribute="centerX" secondItem="W8C-iq-gRW" secondAttribute="centerX" id="AKY-Zy-PcD"/>
+                <constraint firstItem="cOs-Ej-OaV" firstAttribute="top" secondItem="Siz-tK-Zpn" secondAttribute="bottom" constant="10" id="EVy-kp-tnb"/>
+                <constraint firstItem="6SJ-6j-HdZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FDU-nH-rUd"/>
+                <constraint firstItem="6SJ-6j-HdZ" firstAttribute="top" secondItem="ncU-Kz-znE" secondAttribute="bottom" id="FtX-B6-g2H"/>
+                <constraint firstItem="W8C-iq-gRW" firstAttribute="top" secondItem="cOs-Ej-OaV" secondAttribute="bottom" constant="15" id="JOl-Ju-EBp"/>
+                <constraint firstItem="Siz-tK-Zpn" firstAttribute="top" secondItem="zs5-yy-jDC" secondAttribute="bottom" constant="10" id="Jrd-Gh-Phv"/>
+                <constraint firstAttribute="trailing" secondItem="cOs-Ej-OaV" secondAttribute="trailing" id="QPz-NF-rdN"/>
+                <constraint firstAttribute="trailing" secondItem="ncU-Kz-znE" secondAttribute="trailing" id="SIh-1D-K21"/>
+                <constraint firstItem="zs5-yy-jDC" firstAttribute="top" secondItem="6SJ-6j-HdZ" secondAttribute="bottom" constant="-5" id="WLU-Cd-5Fh"/>
+                <constraint firstItem="zs5-yy-jDC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="X8Z-XC-Dig"/>
+                <constraint firstAttribute="bottom" secondItem="W8C-iq-gRW" secondAttribute="bottom" constant="70" id="Yt2-EI-LxH"/>
+                <constraint firstAttribute="centerX" secondItem="Siz-tK-Zpn" secondAttribute="centerX" constant="-0.5" id="ac8-ja-Xc8"/>
+                <constraint firstAttribute="centerX" secondItem="oi4-kX-fhO" secondAttribute="centerX" id="azc-Z8-lhJ"/>
+                <constraint firstAttribute="trailing" secondItem="zs5-yy-jDC" secondAttribute="trailing" id="b2H-nl-xff"/>
+                <constraint firstItem="cOs-Ej-OaV" firstAttribute="top" secondItem="zs5-yy-jDC" secondAttribute="bottom" id="myX-83-3G3"/>
+                <constraint firstItem="cOs-Ej-OaV" firstAttribute="top" secondItem="Siz-tK-Zpn" secondAttribute="bottom" constant="10" id="q3z-IP-b9E"/>
+                <constraint firstAttribute="trailing" secondItem="6SJ-6j-HdZ" secondAttribute="trailing" id="qV6-zi-Kzz"/>
+                <constraint firstItem="cOs-Ej-OaV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="scB-el-0NS"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1w4-p2-ON2"/>
+                    <exclude reference="EVy-kp-tnb"/>
+                    <exclude reference="myX-83-3G3"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="select_bar.png" width="640" height="50"/>
+        <image name="top_bar.png" width="640" height="90"/>
+    </resources>
+</document>

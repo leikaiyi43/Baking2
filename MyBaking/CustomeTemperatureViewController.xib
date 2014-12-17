@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomeTemperatureViewController">
+            <connections>
+                <outlet property="dataPicker" destination="9eX-2U-Igo" id="2xQ-Y7-COc"/>
+                <outlet property="presentTopBar" destination="Zu5-m3-eIr" id="d6k-Ci-3mu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eX-2U-Igo">
+                    <rect key="frame" x="0.0" y="219" width="600" height="162"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="QcB-2L-IIu"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Tzu-AZ-IWO"/>
+                        <outlet property="delegate" destination="-1" id="LfH-eN-bgC"/>
+                    </connections>
+                </pickerView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hd-RQ-q2L">
+                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="EOq-wX-cq3"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="name" id="Zu5-m3-eIr">
+                            <barButtonItem key="leftBarButtonItem" title="Item" id="fJU-ox-idO">
+                                <connections>
+                                    <action selector="cancel:" destination="-1" id="evr-dP-MpR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Item" id="bLo-gy-agM">
+                                <connections>
+                                    <action selector="confirm:" destination="-1" id="PVd-Iw-5Yz"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8hd-RQ-q2L" secondAttribute="trailing" id="Kng-0E-8lv"/>
+                <constraint firstItem="9eX-2U-Igo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qdr-Lo-GFL"/>
+                <constraint firstAttribute="centerY" secondItem="9eX-2U-Igo" secondAttribute="centerY" id="TR9-Nb-5oO"/>
+                <constraint firstItem="8hd-RQ-q2L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="feE-0v-Xt7"/>
+                <constraint firstItem="8hd-RQ-q2L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="pB6-j3-Mhm"/>
+                <constraint firstAttribute="centerX" secondItem="9eX-2U-Igo" secondAttribute="centerX" id="ysx-Xv-MgY"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
